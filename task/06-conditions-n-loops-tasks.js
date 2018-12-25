@@ -30,7 +30,14 @@
  *
  */
 function getFizzBuzz(num) {
-    throw new Error('Not implemented');
+    if(num % 3 == 0 && num % 5 == 0)
+        return "FizzBuzz";
+    else if(num % 3 == 0)
+        return "Fizz";
+    else if(num % 5 == 0)
+        return "Buzz";
+    else
+        return num
 }
 
 
@@ -46,7 +53,11 @@ function getFizzBuzz(num) {
  *   10 => 3628800
  */
 function getFactorial(n) {
-    throw new Error('Not implemented');
+    let result = 1;
+    for(let i = 1; i < n + 1; i++){
+        result *= i;
+    }
+    return result;
 }
 
 
@@ -63,7 +74,12 @@ function getFactorial(n) {
  *   -1,1  =>  0  ( = -1 + 0 + 1 )
  */
 function getSumBetweenNumbers(n1, n2) {
-    throw new Error('Not implemented');
+    let result = 0;
+    while(n1 <= n2){
+        result += n1;
+        n1++;
+    }
+    return result;
 }
 
 
@@ -82,7 +98,7 @@ function getSumBetweenNumbers(n1, n2) {
  *   10,10,10 =>  true
  */
 function isTriangle(a,b,c) {
-    throw new Error('Not implemented');
+    return a + b > c && a + c > b && b + c > a;
 }
 
 
@@ -209,7 +225,7 @@ function getIntervalString(a, b, isStartIncluded, isEndIncluded) {
  * 'noon' => 'noon'
  */
 function reverseString(str) {
-    throw new Error('Not implemented');
+    return str.split("").reverse().join("");
 }
 
 
@@ -226,7 +242,7 @@ function reverseString(str) {
  *   34143 => 34143
  */
 function reverseInteger(num) {
-    throw new Error('Not implemented');
+    return Number(num.toString().split("").reverse().join(""));
 }
 
 
@@ -251,6 +267,20 @@ function reverseInteger(num) {
  *   4916123456789012 => false
  */
 function isCreditCardNumber(ccn) {
+    // let sum = 0;
+    // let alternate = false;
+    // for(let i = ccn.length - 1; i >= 0; i--){
+    //     let n = parseInt(ccn.substring(i,i+1));
+    //     if(alternate){
+    //         n *= 2;
+    //         if(n > 9){
+    //             n = (n % 10) + 1;
+    //         }
+    //     }
+    //     sum += n;
+    //     alternate = !alternate;
+    // }
+    // return sum % 10 === 0;
     throw new Error('Not implemented');
 }
 
